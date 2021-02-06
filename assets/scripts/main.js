@@ -22,6 +22,8 @@ function updateVolume(e) {
     volume = e.target.value;
     document.getElementById('volume-number').value = volume;
     document.getElementById('volume-slider').value = volume;
+    let decVolume = volume / 100;
+    document.getElementById("horn-sound").volume = decVolume;
     if (volume == 0) {
         volIcon.src = "./assets/media/icons/volume-level-0.svg"
         document.getElementById("honk-btn").disabled = true;
