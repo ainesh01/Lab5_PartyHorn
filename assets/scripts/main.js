@@ -13,8 +13,8 @@ volSlider.addEventListener('input', updateVolume);
 
 function updateVolume(e) {
     volume =  e.target.value;
-    document.getElementById(volField).value = volume;
-    document.getElementById(volSlider).value = volume;
+    document.getElementById('volume-number').value = volume;
+    document.getElementById('volume-slider').value = volume;
 }
 
 
