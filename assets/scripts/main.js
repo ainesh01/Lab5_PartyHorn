@@ -18,6 +18,7 @@ function updateVolume(e) {
     document.getElementById('volume-slider').value = volume;
     if(volume == 0){
         volIcon.src = "./assets/media/icons/volume-level-0.svg"
+        document.getElementById("honk-btn").disabled = true; 
     }
     else if (volume >= 1 && volume <= 33) {
         volIcon.src = "./assets/media/icons/volume-level-1.svg"
