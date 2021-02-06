@@ -56,42 +56,25 @@ partyRad.addEventListener('input', () => setHorn(party));
 const setHorn = (horn) => {
     if (horn == 'air'){
         document.getElementById('horn-sound').src = "./assets/media/audio/air-horn.mp3";
-        soundImage.src = mediaDir + '/images/air-horn.svg';
+        soundImage.src = './assets/media/images/air-horn.svg';
     }
     else if (horn == 'car') {
         document.getElementById('horn-sound').src = "./assets/media/audio/car-horn.mp3";
-        soundImage.src = mediaDir + '/images/car.svg';
+        soundImage.src = './assets/media/images/car.svg';
     }
-    else if (horn == 'air') {
+    else if (horn == 'party') {
         document.getElementById('horn-sound').src = "./assets/media/audio/party-horn.mp3";
-        soundImage.src = mediaDir + '/images/party-horn.svg';
+        soundImage.src = '../assets/media/images/party-horn.svg';
     }
     
 }
 
-const setHornSound = (horn) => {
-    
-    document.getElementById('horn-sound').src = `${mediaDir}/audio/${horn}-horn.mp3`
-}
-
-const setHornImage = (horn) => {
-    const soundImage = document.getElementById('sound-image');
-    if (horn === Horns.AIR) {
-        soundImage.src = mediaDir + '/images/air-horn.svg';
-    } else if (horn === Horns.CAR) {
-        soundImage.src = mediaDir + '/images/car.svg'
-    } else {
-        soundImage.src = mediaDir + '/images/party-horn.svg'
-    }
-}
 
 
+audioBut.onclick = (event) => playHorn(event);
 
 
-audioBut.onclick = (event) => playSound(event);
-
-
-const playSound = (event) => {
+const playHorn = (event) => {
     event.preventDefault();
     document.getElementById('horn-sound').play();
 }
