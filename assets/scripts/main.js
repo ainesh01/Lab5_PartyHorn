@@ -9,11 +9,6 @@ const carRad = document.getElementById('radio-car-horn');
 const partyRad = document.getElementById('radio-party-horn');
 const soundImage = document.getElementById('sound-image');
 
-const horn = {
-    airHorn: 'air',
-    carHorn: 'car',
-    partyHorn: 'party',
-}
 
 
 let volume;
@@ -48,12 +43,12 @@ function updateVolume(e) {
 
 
 
-airRad.addEventListener('input', () => setHorn(air));
-carRad.addEventListener('input', () => setHorn(car));
-partyRad.addEventListener('input', () => setHorn(party));
+airRad.addEventListener('input', () => setHorn('air'));
+carRad.addEventListener('input', () => setHorn('car'));
+partyRad.addEventListener('input', () => setHorn('party'));
 
 const setHorn = (horn) => {
-    if (horn == 'air'){
+    if (horn == 'air') {
         document.getElementById('horn-sound').src = "./assets/media/audio/air-horn.mp3";
         soundImage.src = './assets/media/images/air-horn.svg';
     }
@@ -63,9 +58,9 @@ const setHorn = (horn) => {
     }
     else if (horn == 'party') {
         document.getElementById('horn-sound').src = "./assets/media/audio/party-horn.mp3";
-        soundImage.src = '../assets/media/images/party-horn.svg';
+        soundImage.src = './assets/media/images/party-horn.svg';
     }
-    
+
 }
 
 
