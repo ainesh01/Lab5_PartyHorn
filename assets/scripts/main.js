@@ -21,7 +21,6 @@ let volume;
 
 volField.addEventListener('input', updateVolume);
 volSlider.addEventListener('input', updateVolume);
-audioBut.addEventListener('click', playHorn);
 
 
 function updateVolume(e) {
